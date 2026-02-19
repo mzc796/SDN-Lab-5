@@ -21,11 +21,12 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    ```
    sudo apt install maven
    ```
-2. Install Java 2.1:
+2. Install compatible Java:
+   (1) Install Java 2.1:
    ```
    sudo apt install openjdk-21-jdk
    ```
-   List installed Java versions
+   (2) List installed Java versions
    ```
    sudo update-alternatives --config java
    ```
@@ -38,6 +39,23 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
      2            /usr/lib/jvm/java-21-openjdk-arm64/bin/java   2111      manual mode
    
    Press <enter> to keep the current choice[*], or type selection number: 
+   ```
+   (3) Configure Java Home for Java 2.1
+   ```
+   sudo vim /etc/profile
+   ```
+   Add the following to the end of /etc/profile
+   ```
+   JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+   PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+   export JAVA_HOME
+   export JRE_HOME
+   export PATH
+   ```
+   (3) Make JAVE_HOME valid and Test JAVA Version
+   ```
+   source /etc/profile
+   java -version
    ```
    
 2. Download the code:
