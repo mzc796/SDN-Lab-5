@@ -17,11 +17,30 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
 
 [OpenDaylight Flow Examples](https://docs.opendaylight.org/projects/openflowplugin/en/latest/users/flow-examples.html)
 ## Preparation
-1. Install maven:
+1. Install compatible maven:
    ```
-   sudo apt install maven
+   cd /tmp
+   MAVEN_VER=3.9.6
+
+   curl -fL -o apache-maven-${MAVEN_VER}-bin.tar.gz \
+   https://archive.apache.org/dist/maven/maven-3/${MAVEN_VER}/binaries/apache-maven-${MAVEN_VER}-bin.tar.gz
+
+   ls -lh apache-maven-${MAVEN_VER}-bin.tar.gz
+   tar -xzf apache-maven-${MAVEN_VER}-bin.tar.gz
+   sudo rm -rf /opt/maven
+   sudo mv apache-maven-${MAVEN_VER} /opt/maven
    ```
-2. Install compatible Java:
+   (2) Add Maven Path:
+   ```
+   echo 'export MAVEN_HOME=/opt/maven' >> ~/.bashrc
+   echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> ~/.bashrc
+   source ~/.bashrc
+   hash -r
+   mvn -version
+   ```
+   You should see Maven 3.9.6.
+   
+3. Install compatible Java:
    (1) Install Java 2.1:
    ```
    sudo apt install openjdk-21-jdk
