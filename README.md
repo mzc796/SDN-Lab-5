@@ -46,31 +46,7 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    ```
    /dev/nvme0n1p2   98G   18G   80G   19%   /
    ```
-   
-2. Install compatible maven:
-   ```
-   cd /tmp
-   MAVEN_VER=3.9.6
-
-   curl -fL -o apache-maven-${MAVEN_VER}-bin.tar.gz \
-   https://archive.apache.org/dist/maven/maven-3/${MAVEN_VER}/binaries/apache-maven-${MAVEN_VER}-bin.tar.gz
-
-   ls -lh apache-maven-${MAVEN_VER}-bin.tar.gz
-   tar -xzf apache-maven-${MAVEN_VER}-bin.tar.gz
-   sudo rm -rf /opt/maven
-   sudo mv apache-maven-${MAVEN_VER} /opt/maven
-   ```
-   (2) Add Maven Path:
-   ```
-   echo 'export MAVEN_HOME=/opt/maven' >> ~/.bashrc
-   echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> ~/.bashrc
-   source ~/.bashrc
-   hash -r
-   mvn -version
-   ```
-   You should see Maven 3.9.6.
-   
-3. Install compatible Java:
+1. Install compatible Java:
    (1) Install Java 2.1:
    ```
    sudo apt install openjdk-21-jdk
@@ -106,12 +82,34 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    source /etc/profile
    java -version
    ```
+2. Install compatible maven:
+   ```
+   cd /tmp
+   MAVEN_VER=3.9.6
+
+   curl -fL -o apache-maven-${MAVEN_VER}-bin.tar.gz \
+   https://archive.apache.org/dist/maven/maven-3/${MAVEN_VER}/binaries/apache-maven-${MAVEN_VER}-bin.tar.gz
+
+   ls -lh apache-maven-${MAVEN_VER}-bin.tar.gz
+   tar -xzf apache-maven-${MAVEN_VER}-bin.tar.gz
+   sudo rm -rf /opt/maven
+   sudo mv apache-maven-${MAVEN_VER} /opt/maven
+   ```
+   (2) Add Maven Path:
+   ```
+   echo 'export MAVEN_HOME=/opt/maven' >> ~/.bashrc
+   echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> ~/.bashrc
+   source ~/.bashrc
+   hash -r
+   mvn -version
+   ```
+   You should see Maven 3.9.6.
    
-2. Download the code:
+3. Download the code:
    ```
    git clone https://github.com/mzc796/SDN-Lab-4.git
    ```
-3. Build L2switch project:
+4. Build L2switch project:
    ```
    cd SDN-Lab-4
    mvn clean install
