@@ -58,7 +58,7 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    ```
    You should see something like:
    ```
-   There are 2 choices for the alternative java (providing /usr/bin/java).
+   There are 2 choices for the alternative Java (providing /usr/bin/java).
    Selection    Path                                         Priority   Status
    * 0            /usr/lib/jvm/java-21-openjdk-arm64/bin/java   2111      auto mode
      1            /usr/lib/jvm/java-17-openjdk-arm64/bin/java   1711      manual mode
@@ -78,12 +78,14 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    export JRE_HOME
    export PATH
    ```
-   (3) Make JAVE_HOME valid and Test JAVA Version
+   (4) Make JAVE_HOME valid and Test JAVA Version
    ```
    source /etc/profile
    java -version
    ```
-2. Install compatible maven:
+2. Install compatible Maven:
+   
+   (1) Install maven 3.9.6
    ```
    cd /tmp
    MAVEN_VER=3.9.6
