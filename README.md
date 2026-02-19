@@ -50,7 +50,7 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    ```
 1. Install compatible Java:
    
-   (1) Install Java 2.1:
+   (1) Install Java 21:
    ```
    sudo apt install openjdk-21-jdk
    ```
@@ -68,11 +68,11 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    
    Press <enter> to keep the current choice[*], or type selection number: 
    ```
-   (3) Configure Java Home for Java 2.1
+   (3) Configure Java Home for Java 21
    ```
    sudo vim /etc/profile
    ```
-   Point Java Home to Java 2.1, instead of 1.7
+   Point Java Home to Java 21, instead of 17
    ```
    JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
    #JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
