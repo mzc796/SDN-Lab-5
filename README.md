@@ -130,12 +130,40 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    s1
    ├── s2
    │   ├── s3
+   │   │   ├── h1
+   │   │   └── h2
    │   └── s4
+   │       ├── h3
+   │       └── h4
    └── s5
        ├── s6
+       │   ├── h5
+       │   └── h6
        └── s7
+           ├── h7
+           └── h8
    ```
-7. In the mininet terminal:
+7. Observe default flow entries. For example:
+   ```
+   cd mn/
+   sudo ./dump_flows s3
+   ```
+8. `ping` hosts and observer flow entries. In the mininet terminal:
+   (1)
+   ```
+   h1 ping h2
+   ```
+   In the system terminal:
+   ```
+   sudo ./dump_flows s3
+   ```
+   (2)
    ```
    h1 ping h3
    ```
+   In the system terminal:
+   ```
+   sudo ./dump_flows s3
+   ```
+   Question: Observe cases (1) and (2), and reason about the difference. 
+   
