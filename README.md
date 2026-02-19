@@ -17,10 +17,17 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
 
 [OpenDaylight Flow Examples](https://docs.opendaylight.org/projects/openflowplugin/en/latest/users/flow-examples.html)
 ## Preparation
-1. Install maven
+1. Install maven:
    ```
    sudo apt install maven
    ```
-3. 
-
+2. Download the code:
+   ```
+   git clone https://github.com/mzc796/SDN-Lab-4.git
+   ```
+3. Build L2switch project:
+   ```
+   cd SDN-Lab-4
+   mvn clean install
+   ```
 
