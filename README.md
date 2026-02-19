@@ -18,7 +18,9 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
 [OpenDaylight Flow Examples](https://docs.opendaylight.org/projects/openflowplugin/en/latest/users/flow-examples.html)
 ## Preparation
 0. If the system doesn't have enough disk space:
+   
    (1) Shut down the VM. In the VMWare Fusion settings->Hardware Disk-> Enlarge the Disk allocation.
+   
    (2) Power on the VM. Install growpart (if not installed):
    ```
    sudo apt update
