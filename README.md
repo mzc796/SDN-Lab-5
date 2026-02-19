@@ -47,6 +47,7 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    /dev/nvme0n1p2   98G   18G   80G   19%   /
    ```
 1. Install compatible Java:
+   
    (1) Install Java 2.1:
    ```
    sudo apt install openjdk-21-jdk
