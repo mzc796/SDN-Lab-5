@@ -117,4 +117,25 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    cd SDN-Lab-4/
    mvn clean install -DskipTests -Dcheckstyle.skip
    ```
-
+5. Run OpenDaylight-L2switch
+   ```
+   cd distribution/karaf/target/assembly/bin/
+   sudo ./karaf
+   ```
+6. Run Mininet. Open a new terminal:
+   ```
+   sudo mn --topo tree,depth=3,fanout=2 --switch ovsk,protocols=OpenFlow13 --controller remote,ip=127.0.0.1,port=6653
+   ```
+   ```
+   s1
+   ├── s2
+   │   ├── s3
+   │   └── s4
+   └── s5
+       ├── s6
+       └── s7
+   ```
+7. In the mininet terminal:
+   ```
+   h1 ping h3
+   ```
