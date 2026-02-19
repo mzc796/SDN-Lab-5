@@ -1,5 +1,5 @@
 # SDN-Lab-4
-We use L2switch project as the basis to build customized SDN applications.
+Learn L2switch project. Later, we will use L2switch project as the basis to build customized SDN applications.
 
 ## Virtual Machine Summary
 Memory: >= 8GB
