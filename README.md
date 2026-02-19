@@ -72,9 +72,10 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    ```
    sudo vim /etc/profile
    ```
-   Add the following to the end of /etc/profile
+   Point Java Home to Java 2.1, instead of 1.7
    ```
    JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+   #JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
    PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
    export JAVA_HOME
    export JRE_HOME
