@@ -17,7 +17,35 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
 
 [OpenDaylight Flow Examples](https://docs.opendaylight.org/projects/openflowplugin/en/latest/users/flow-examples.html)
 ## Preparation
-1. Install compatible maven:
+0. If the system doesn't have enough disk space:
+   (1) Shut down the VM. In the VMWare Fusion settings->Hardware Disk-> Enlarge the Disk allocation.
+   (2) Power on the VM. Install growpart (if not installed):
+   ```
+   sudo apt update
+   sudo apt install cloud-guest-utils
+   ```
+   (3) Expand partition 2
+   ```
+   sudo growpart /dev/nvme0n1 2
+   ```
+   Expected output:
+   ```
+   CHANGED: partition=2 ...
+   ```
+   (4) Resize ext4 filesystem
+   ```
+   sudo resize2fs /dev/nvme0n1p2
+   ```
+   (5) Verify
+   ```
+   df -h
+   ```
+   You should see something like this:
+   ```
+   /dev/nvme0n1p2   98G   18G   80G   19%   /
+   ```
+   
+2. Install compatible maven:
    ```
    cd /tmp
    MAVEN_VER=3.9.6
