@@ -115,6 +115,6 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
 4. Build L2switch project:
    ```
    cd SDN-Lab-4/
-   mvn clean install
+   mvn clean install -DskipTests -Dcheckstyle.skip
    ```
 
