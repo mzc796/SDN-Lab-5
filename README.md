@@ -113,11 +113,11 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    
 3. Download the code:
    ```
-   git clone https://github.com/mzc796/SDN-Lab-4.git
+   git clone https://github.com/mzc796/SDN-Lab-5.git
    ```
 4. Build L2switch project:
    ```
-   cd SDN-Lab-4/
+   cd SDN-Lab-5/
    mvn clean install -DskipTests -Dcheckstyle.skip
    ```
 5. Run OpenDaylight-L2switch
