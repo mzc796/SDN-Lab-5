@@ -180,12 +180,14 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    ```
    Question: Observe cases (1) and (2), and reason about the difference.
    
-10. Request the topology after ping. In a system terminal:
+9. Request the topology after ping. In a system terminal:
    ```
    cd SDN-Lab-5/odl-scripts/
    sudo ./req_topo.sh
    ```
-   Read the `topo.json` file. What is the change compared to the topology observed at Step 7 (2)?
+   Read the `topo.json` file. 
    
-11. Change the source code to make the link ID of the links between the host and the switch start with "hello-".
+   Question: What is the change compared to the topology observed at Step 7 (2)?
+   
+10. Change the source code to make the link ID of the links between the host and the switch start with "hello-".
     For example, "link-id": "hello-openflow:3:2/host:ea:09:0d:5c:77:31" instead of "openflow:3:2/host:ea:09:0d:5c:77:31".
