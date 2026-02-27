@@ -19,7 +19,7 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
 
 [L2switch User Guide](https://test-odl-docs.readthedocs.io/en/latest/user-guide/l2switch-user-guide.html)
 ## Preparation
-0. If the system doesn't have enough disk space:
+0. If you got an error saying the system doesn't have enough disk space, refer to the following steps in Step 0. Otherwise, start from Step 1.
    
    (1) Shut down the VM. In the VMWare Fusion settings->Hardware Disk-> Enlarge the Disk allocation.
    
