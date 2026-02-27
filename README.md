@@ -161,6 +161,7 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    Note: Remember what you observed.
    
 8. `ping` different hosts and observer flow entries. 
+
    (1) In the mininet terminal:
    ```
    h1 ping h2
@@ -179,7 +180,7 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    ```
    Question: Observe cases (1) and (2), and reason about the difference.
    
-9. Request the topology after ping. In a system terminal:
+10. Request the topology after ping. In a system terminal:
    ```
    cd SDN-Lab-5/odl-scripts/
    sudo ./req_topo.sh
