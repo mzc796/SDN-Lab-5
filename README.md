@@ -199,4 +199,7 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    ```
 10. Change the source code to make the link ID of the links between the host and the switch start with "hello-".
     For example, "link-id": "hello-openflow:3:2/host:ea:09:0d:5c:77:31" instead of "openflow:3:2/host:ea:09:0d:5c:77:31".
+    
     Hint: The file we need to change is under the path of `SDN-Lab-5/hosttracker/implementation/src/main/java/org/opendaylight/l2switch/hosttracker/plugin`.
+    
+    Note: Before we recompile the project to bring in our change, we need to manually delete the folder of `SDN-Lab-5/distribution/karaf/target`.
