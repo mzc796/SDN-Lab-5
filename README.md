@@ -156,11 +156,17 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    (2) Observe topology.
    ```
    cd SDN-Lab-5/odl-scripts/
+   mkdir data
    sudo ./req_topo.sh
+   ```
+   (3) Copy this topology file with another file name to prevent future overwriting.
+   ```
+   cd data/
+   cp topo.json topo_old.json
    ```
    Note: Remember what you observed.
    
-8. `ping` different hosts and observer flow entries. 
+9. `ping` different hosts and observer flow entries. 
 
    (1) In the mininet terminal:
    ```
@@ -180,7 +186,7 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    ```
    Question: Observe cases (1) and (2), and reason about the difference.
    
-9. Request the topology after ping. In a system terminal:
+10. Request the topology after ping. In a system terminal:
    ```
    cd SDN-Lab-5/odl-scripts/
    sudo ./req_topo.sh
@@ -188,6 +194,9 @@ Installation Disc: [ubuntu-22.04.4-desktop-amd64.iso](https://old-releases.ubunt
    Read the `topo.json` file. 
    
    Question: What is the change compared to the topology observed at Step 7 (2)?
-   
-10. Change the source code to make the link ID of the links between the host and the switch start with "hello-".
+   ```
+   diff topo.json topo_old.json
+   ```
+11. Change the source code to make the link ID of the links between the host and the switch start with "hello-".
     For example, "link-id": "hello-openflow:3:2/host:ea:09:0d:5c:77:31" instead of "openflow:3:2/host:ea:09:0d:5c:77:31".
+    Hint: The file we need to change is under the path of `SDN-Lab-5/hosttracker/implementation/src/main/java/org/opendaylight/l2switch/hosttracker/plugin`.
