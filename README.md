@@ -1,5 +1,21 @@
 # SDN-Lab-5
-Learn L2switch project. Later, we will use L2switch project as the basis to build customized SDN applications.
+This project is based on the OpenDaylight L2Switch project (https://github.com/opendaylight/l2switch) for educational purposes.
+
+The original OpenDaylight project is licensed under the Eclipse Public License (EPL). All original license headers and copyright notices are preserved.
+
+In this lab, you will explore the OpenDaylight L2Switch project, which implements reactive Layer-2 forwarding in an SDN environment.
+## Learning Objectives
+This lab serves as the foundation for building customized SDN applications in later labs.
+
+You will:
+
+* Understand how L2Switch performs reactive forwarding
+
+* Inspect OpenFlow flow entries before and after traffic
+
+* Observe topology discovery and host tracking
+
+* Modify controller source code and rebuild OpenDaylight
 
 ## Virtual Machine Summary
 Memory: >= 8GB
