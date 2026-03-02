@@ -1,5 +1,5 @@
 # SDN-Lab-5
-This project is derived from the OpenDaylight L2Switch project: https://github.com/opendaylight/l2switch
+This project is derived from the OpenDaylight L2Switch project: https://github.com/opendaylight/l2switch.
 OpenDaylight is licensed under the Eclipse Public License (EPL). All original license headers and copyright notices are preserved.
 
 In this lab, you will explore the OpenDaylight L2Switch project, which implements reactive Layer-2 forwarding in an SDN environment.
